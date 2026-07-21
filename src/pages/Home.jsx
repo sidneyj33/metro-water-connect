@@ -1,35 +1,95 @@
+import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
+import "../styles/PageStyles.css";
+
 function Home() {
   return (
-    <div className="app">
-      <header className="hero">
-        <div className="hero-overlay">
-          <h1>Metro Water Connect</h1>
+    <Layout>
+      <main className="home-page">
+        <section
+          className="hero"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "70vh",
+            padding: "40px 20px",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              maxWidth: "700px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                background: "#e5f1ff",
+                color: "#0759b5",
+                padding: "8px 18px",
+                borderRadius: "999px",
+                fontWeight: "600",
+                marginBottom: "24px",
+              }}
+            >
+              Metro Water Connect
+            </div>
 
-          <h2>Customer & Staff Portal</h2>
+            <h1
+              style={{
+                fontSize: "58px",
+                lineHeight: "1.1",
+                margin: "0 0 24px",
+                color: "#102a43",
+              }}
+            >
+              Manage Your
+              <br />
+              <span style={{ color: "#0759b5" }}>
+                Backflow Compliance
+              </span>
+              <br />
+              Online
+            </h1>
 
-          <p>
-            Schedule inspections, upload reports, and manage Metro Water services.
-          </p>
-        </div>
-      </header>
+            <p
+              style={{
+                maxWidth: "560px",
+                fontSize: "18px",
+                lineHeight: "1.7",
+                color: "#486581",
+              }}
+            >
+              A faster, easier way to manage inspections, schedule
+              appointments, upload documents, and stay connected with Metro
+              Water Services.
+            </p>
 
-      <section className="cards">
-        <div className="card">
-          <h3>Customer Portal</h3>
-          <button>Enter</button>
-        </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "16px",
+                marginTop: "32px",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
+              <Link to="/login" className="btn btn-primary">
+                Customer Login
+              </Link>
 
-        <div className="card">
-          <h3>Staff Portal</h3>
-          <button>Enter</button>
-        </div>
-
-        <div className="card disabled">
-          <h3>Inspector Portal</h3>
-          <button disabled>Coming Soon</button>
-        </div>
-      </section>
-    </div>
+              <Link to="/register" className="btn btn-secondary">
+                Create Account
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 }
 

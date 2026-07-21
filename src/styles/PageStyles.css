@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7fbff;
+  color: #102a43;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #d9e6f2;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-title {
+  color: #0759b5;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.logo-subtitle {
+  color: #64748b;
+  font-size: .82rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #102a43;
+  font-weight: 600;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: #0759b5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #064996;
+}
+
+.btn-secondary {
+  border: 2px solid #0759b5;
+  color: #0759b5;
+  background: #fff;
+}
+
+.btn-secondary:hover {
+  background: #eef6ff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 72vh;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #e7f2ff;
+  color: #0759b5;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin: 0 0 26px;
+  color: #102a43;
+}
+
+.hero h1 span {
+  color: #0759b5;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #486581;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #64748b;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card,
+.step-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 45px;
+  border-radius: 20px;
+  background: #e7f2ff;
+  text-align: center;
+}
+
+.cta-section .btn {
+  margin-top: 20px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+  background: #0759b5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .feature-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
